@@ -1,0 +1,42 @@
+/*
+4) [POO-009] Crie um programa que solicite ao usuário dois números inteiros. Através de um método, que 
+receba esses 2 números como parâmetros de entrada, verifique e retorne o menor dos dois valores.
+* 
+Restrição: USAR o pacote Math, em específico, o método min().
+* 
+Entrada:                             Saída:
+Entre com um número inteiro: 8       O menor é: 2
+Entre com outro número inteiro: 2
+* 
+Entre com um número inteiro: -48     O menor é: -48
+Entre com outro número inteiro: 48
+* 
+Entre com um número inteiro: 17      O menor é: 17
+Entre com outro número inteiro: 17
+ * 
+ */
+
+import java.util.Scanner;
+
+public class L02Exer04 {
+	
+	public static void main (String[] args) {
+		
+		Scanner leia = new Scanner (System.in);
+		
+		int num1, num2;
+		
+		System.out.print ("Digite o primeiro numero inteiro: ");
+		num1 = leia.nextInt();
+		
+		System.out.print ("Digite o segundo numero inteiro: ");
+		num2 = leia.nextInt();
+		
+		System.out.print ("O menor numero eh o : " + menorValor ( num1, num2));
+	}
+	static int menorValor ( int num1, int num2) { 
+		
+	return Math.min (num1, num2);
+	}
+}
+
